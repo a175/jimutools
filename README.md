@@ -41,3 +41,23 @@ pip install --user python-docx
 ```
 とかやれば簡単に入れられると思う.
 
+
+
+## seminar-syllabus
+
+セミナーのシラバスをLaTeXで書くためのスタイルファイル.
+
+### 数学購読の後期分
+
+`semianr-syllabus/R5-2-sugakukodoku-stylefile/`
+にあるファイル
+* `R5-2-sugakukodoku.sty`
+* `R5-2-sugakukodoku-frontend.sty`
+* `documentonform.sty`
+* `R5-2-sugakukodoku.pdf`
+* `projectdata.json`
+* `sample.tex`
+を全て同じフォルダに入れて,
+`sample.tex`をコンパイルすればよい.
+  
+           
