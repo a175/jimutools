@@ -186,7 +186,7 @@ def mailtxt(formdata):
         r=r+"\n\n"
     else:
         r=r+"研修というかたちで行こうと考えています.\n"
-    r=r+"お手続きをお願いいたします.\n\n" 
+    r=r+"ファイルを添付いたしますので, お手続きをお願いいたします.\n\n" 
     if "氏名" in formdata:
         r=r+"   "+formdata["氏名"]+"\n" 
     
