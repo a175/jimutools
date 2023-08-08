@@ -9,7 +9,7 @@
 セミナーのシラバスをLaTeXで書くためのスタイルファイル.
 
 詳細は,
-[`semianr-syllabus/README.md`](semianr-syllabus/README.md)
+[`semianr-syllabus/README.md`](/semianr-syllabus/)
 を参照.
 
 ## kenshu
