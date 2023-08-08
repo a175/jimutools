@@ -18,6 +18,6 @@
 加えて, それを送付するときのカバーレターの文案も生成する.
 
 詳細は,
-`kensu/README.md`
+[`kensu/README.md`](/kensu/)
 を参照.
 
