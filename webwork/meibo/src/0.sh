@@ -12,7 +12,7 @@ OUT_NAMELIST=namelist.txt
 
 cat $MEIBO | cut -d, -f3-5|sed 's/ /,/' >  $OUT_IDNAME
 cat $OUT_IDNAME | sed 's/,/.,\/,/' |sed 's/^/s\/,./'|sed 's/$/,\//' > $OUT_SED_ID
-cat $PARTICIPANTS|egrep '[a-z][0-9]*[a-z]$'|awk -F, '{print $3","$3","$2","$1}'| sed -f $OUT_SED_ID > $OUT_NAMELIST
+cat $PARTICIPANTS|egrep ',[a-z][0-9]*[a-z],'|awk -F, '{print $3","$3","$2","$1}'| sed -f $OUT_SED_ID > $OUT_NAMELIST
 
 
 echo "Check bad lines..."
