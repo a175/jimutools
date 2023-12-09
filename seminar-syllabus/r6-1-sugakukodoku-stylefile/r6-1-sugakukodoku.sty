@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This file was created by AFM.
+% The names of commands to put boxes may be just Box IDs.
+% They are not good names to use.
+% Please define commands to use as frontend.
+%
+% Please redefine the command \pageNoA@at@first@@@R@nu@
+% if you want to do something whenever pageNoA is called.
+%
+% Please redefine \baseuplength
+% if you want to move background image up.
+%
+% Boxcommands, e.g. \boxIDa, 
+% between \begin{groupedcolumns} and \end{groupedcolumns}
+% use common top margin.
+% The command \nextrow in the environment updates the margin.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definition of basic commands
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage{documentonform}
+
+\newif\if@PDF@image@type@nu@
+\@PDF@image@type@nu@true
+\newif\if@js@basecls@nu@
+\@js@basecls@nu@false
+
+\DeclareOption{pdf}{\@PDF@image@type@nu@true}
+\DeclareOption{none}{\@PDF@image@type@nu@false}
+\DeclareOption{js}{\@js@basecls@nu@true}
+\ProcessOptions\relax
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nu@input@json@project@data{R}{projectdata.json}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Backend commands for pages.
+\newenvironment{pageNoA@none@@@R@nu@}{\thispagestyle{empty}\begin{overwrappicture*}[bb=0 0 595 842, page=1]{r6-1-sugakukodoku.pdf}\pageNoA@at@first@@@R@nu@}{\end{overwrappicture*}}
+\newenvironment{pageNoA@pdf@@@R@nu@}{\thispagestyle{empty}\begin{overwrappicture}[bb=0 0 595 842, page=1]{r6-1-sugakukodoku.pdf}\pageNoA@at@first@@@R@nu@}{\end{overwrappicture}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Backend commands for table forms.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forntend commands of boxes
+
+% page 1 i.e.,A
+
+% \newenvironment{boxIDb}{\begin{nu@documentonform@put@box@env}{R}{boxIDb}}{\end{nu@documentonform@put@box@env}}
+\newcommand{\boxIDb}[1]{\nu@documentonform@put@box@com{R}{boxIDb}{#1}}
+% \newcommand{\boxIDb}{\nu@documentonform@put@checkmark@com{R}{boxIDb}}
+% \newcommand{\boxIDb}{\nu@documentonform@put@strike@com{R}{boxIDb}}
+% \newcommand{\boxIDb}{\nu@documentonform@put@rule@com{R}{boxIDb}}
+% \newcommand{\boxIDb}{\nu@documentonform@put@oval@com{R}{boxIDb}}
+
+
+% \newenvironment{boxIDc}{\begin{nu@documentonform@put@box@env}{R}{boxIDc}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDc}[1]{\nu@documentonform@put@box@com{R}{boxIDc}{#1}}
+% \newcommand{\boxIDc}{\nu@documentonform@put@checkmark@com{R}{boxIDc}}
+\newcommand{\boxIDc}{\nu@documentonform@put@strike@com{R}{boxIDc}}
+% \newcommand{\boxIDc}{\nu@documentonform@put@rule@com{R}{boxIDc}}
+% \newcommand{\boxIDc}{\nu@documentonform@put@oval@com{R}{boxIDc}}
+
+
+% \newenvironment{boxIDd}{\begin{nu@documentonform@put@box@env}{R}{boxIDd}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDd}[1]{\nu@documentonform@put@box@com{R}{boxIDd}{#1}}
+% \newcommand{\boxIDd}{\nu@documentonform@put@checkmark@com{R}{boxIDd}}
+\newcommand{\boxIDd}{\nu@documentonform@put@strike@com{R}{boxIDd}}
+% \newcommand{\boxIDd}{\nu@documentonform@put@rule@com{R}{boxIDd}}
+% \newcommand{\boxIDd}{\nu@documentonform@put@oval@com{R}{boxIDd}}
+
+
+% \newenvironment{boxIDe}{\begin{nu@documentonform@put@box@env}{R}{boxIDe}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDe}[1]{\nu@documentonform@put@box@com{R}{boxIDe}{#1}}
+% \newcommand{\boxIDe}{\nu@documentonform@put@checkmark@com{R}{boxIDe}}
+\newcommand{\boxIDe}{\nu@documentonform@put@strike@com{R}{boxIDe}}
+% \newcommand{\boxIDe}{\nu@documentonform@put@rule@com{R}{boxIDe}}
+% \newcommand{\boxIDe}{\nu@documentonform@put@oval@com{R}{boxIDe}}
+
+
+% \newenvironment{boxIDf}{\begin{nu@documentonform@put@box@env}{R}{boxIDf}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDf}[1]{\nu@documentonform@put@box@com{R}{boxIDf}{#1}}
+% \newcommand{\boxIDf}{\nu@documentonform@put@checkmark@com{R}{boxIDf}}
+\newcommand{\boxIDf}{\nu@documentonform@put@strike@com{R}{boxIDf}}
+% \newcommand{\boxIDf}{\nu@documentonform@put@rule@com{R}{boxIDf}}
+% \newcommand{\boxIDf}{\nu@documentonform@put@oval@com{R}{boxIDf}}
+
+
+\newenvironment{boxIDg}{\begin{nu@documentonform@put@box@env}{R}{boxIDg}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDg}[1]{\nu@documentonform@put@box@com{R}{boxIDg}{#1}}
+% \newcommand{\boxIDg}{\nu@documentonform@put@checkmark@com{R}{boxIDg}}
+% \newcommand{\boxIDg}{\nu@documentonform@put@strike@com{R}{boxIDg}}
+% \newcommand{\boxIDg}{\nu@documentonform@put@rule@com{R}{boxIDg}}
+% \newcommand{\boxIDg}{\nu@documentonform@put@oval@com{R}{boxIDg}}
+
+
+\newenvironment{boxIDh}{\begin{nu@documentonform@put@box@env}{R}{boxIDh}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDh}[1]{\nu@documentonform@put@box@com{R}{boxIDh}{#1}}
+% \newcommand{\boxIDh}{\nu@documentonform@put@checkmark@com{R}{boxIDh}}
+% \newcommand{\boxIDh}{\nu@documentonform@put@strike@com{R}{boxIDh}}
+% \newcommand{\boxIDh}{\nu@documentonform@put@rule@com{R}{boxIDh}}
+% \newcommand{\boxIDh}{\nu@documentonform@put@oval@com{R}{boxIDh}}
+
+
+% \newenvironment{boxIDi}{\begin{nu@documentonform@put@box@env}{R}{boxIDi}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDi}[1]{\nu@documentonform@put@box@com{R}{boxIDi}{#1}}
+% \newcommand{\boxIDi}{\nu@documentonform@put@checkmark@com{R}{boxIDi}}
+\newcommand{\boxIDi}{\nu@documentonform@put@strike@com{R}{boxIDi}}
+% \newcommand{\boxIDi}{\nu@documentonform@put@rule@com{R}{boxIDi}}
+% \newcommand{\boxIDi}{\nu@documentonform@put@oval@com{R}{boxIDi}}
+
+
+% \newenvironment{boxIDj}{\begin{nu@documentonform@put@box@env}{R}{boxIDj}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDj}[1]{\nu@documentonform@put@box@com{R}{boxIDj}{#1}}
+% \newcommand{\boxIDj}{\nu@documentonform@put@checkmark@com{R}{boxIDj}}
+% \newcommand{\boxIDj}{\nu@documentonform@put@strike@com{R}{boxIDj}}
+% \newcommand{\boxIDj}{\nu@documentonform@put@rule@com{R}{boxIDj}}
+\newcommand{\boxIDj}{\nu@documentonform@put@oval@com{R}{boxIDj}}
+
+
+% \newenvironment{boxIDk}{\begin{nu@documentonform@put@box@env}{R}{boxIDk}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDk}[1]{\nu@documentonform@put@box@com{R}{boxIDk}{#1}}
+% \newcommand{\boxIDk}{\nu@documentonform@put@checkmark@com{R}{boxIDk}}
+\newcommand{\boxIDk}{\nu@documentonform@put@strike@com{R}{boxIDk}}
+% \newcommand{\boxIDk}{\nu@documentonform@put@rule@com{R}{boxIDk}}
+% \newcommand{\boxIDk}{\nu@documentonform@put@oval@com{R}{boxIDk}}
+
+
+% \newenvironment{boxIDl}{\begin{nu@documentonform@put@box@env}{R}{boxIDl}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDl}[1]{\nu@documentonform@put@box@com{R}{boxIDl}{#1}}
+% \newcommand{\boxIDl}{\nu@documentonform@put@checkmark@com{R}{boxIDl}}
+% \newcommand{\boxIDl}{\nu@documentonform@put@strike@com{R}{boxIDl}}
+% \newcommand{\boxIDl}{\nu@documentonform@put@rule@com{R}{boxIDl}}
+\newcommand{\boxIDl}{\nu@documentonform@put@oval@com{R}{boxIDl}}
+
+
+% \newenvironment{boxIDm}{\begin{nu@documentonform@put@box@env}{R}{boxIDm}}{\end{nu@documentonform@put@box@env}}
+\newcommand{\boxIDm}[1]{\nu@documentonform@put@box@com{R}{boxIDm}{#1}}
+% \newcommand{\boxIDm}{\nu@documentonform@put@checkmark@com{R}{boxIDm}}
+% \newcommand{\boxIDm}{\nu@documentonform@put@strike@com{R}{boxIDm}}
+% \newcommand{\boxIDm}{\nu@documentonform@put@rule@com{R}{boxIDm}}
+% \newcommand{\boxIDm}{\nu@documentonform@put@oval@com{R}{boxIDm}}
+
+
+\newenvironment{boxIDn}{\begin{nu@documentonform@put@box@env}{R}{boxIDn}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDn}[1]{\nu@documentonform@put@box@com{R}{boxIDn}{#1}}
+% \newcommand{\boxIDn}{\nu@documentonform@put@checkmark@com{R}{boxIDn}}
+% \newcommand{\boxIDn}{\nu@documentonform@put@strike@com{R}{boxIDn}}
+% \newcommand{\boxIDn}{\nu@documentonform@put@rule@com{R}{boxIDn}}
+% \newcommand{\boxIDn}{\nu@documentonform@put@oval@com{R}{boxIDn}}
+
+
+% \newenvironment{boxIDa}{\begin{nu@documentonform@put@box@env}{R}{boxIDa}}{\end{nu@documentonform@put@box@env}}
+\newcommand{\boxIDa}[1]{\nu@documentonform@put@box@com{R}{boxIDa}{#1}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@checkmark@com{R}{boxIDa}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@strike@com{R}{boxIDa}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@rule@com{R}{boxIDa}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@oval@com{R}{boxIDa}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forntend commands of pages
+
+\if@PDF@image@type@nu@\newenvironment{pageNoA}{\begin{pageNoA@pdf@@@R@nu@}}{\end{pageNoA@pdf@@@R@nu@}}
+\else
+\newenvironment{pageNoA}{\begin{pageNoA@none@@@R@nu@}}{\end{pageNoA@none@@@R@nu@}}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hooked commands
+
+\newcommand{\pageNoA@at@first@@@R@nu@}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forntend commands of table forms
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%

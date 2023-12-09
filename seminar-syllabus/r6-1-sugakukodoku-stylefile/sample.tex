@@ -1,0 +1,49 @@
+%sample
+\documentclass[a4paper,12pt,dvipdfmx]{amsart}
+
+%\nofiles
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[pdf]{r6-1-sugakukodoku}
+\usepackage{r6-1-sugakukodoku-frontend}
+
+% If you use the class jsarticle, then use js option
+%\usepackage[pdf,js]{R5-2-sugakukodoku}
+
+%
+\usepackage{url}
+\begin{document}
+
+% 数学購読 2学期シラバス
+\begin{sugakuKodoku2}
+  % 年度
+  \nendo{6}
+
+  % 氏名
+  \namae{教員の氏名}
+
+
+  % テキスト ［著者、タイトル、出版社］（複数も可）
+  \begin{textbooks}
+    \begin{enumerate}
+      \item a
+    \end{enumerate}
+  \end{textbooks}
+  
+  % 教員のコメント
+  \begin{comments}
+    特になし.
+  \end{comments}
+
+  % 申込みにあたっての事前連絡（面談等）：
+  \mendan{随時}
+  %\mendanX
+
+  % "面談の日時など" の次の行
+  \begin{misc}
+    \url{id@domain} まで.
+  \end{misc}
+  
+\end{sugakuKodoku2}
+
+\end{document}

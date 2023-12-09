@@ -1,0 +1,387 @@
+{
+  "bgimagepath": "r6-1-sugakukodoku.pdf",
+  "stylename": "r6-1-sugakukodoku",
+  "samplebase": "sample",
+  "makefilepath": "Makefile",
+  "jsonpath": "projectdata.json",
+  "localcommandsuffix": "R",
+  "boxes": [
+    {
+      "id_as_int": 1,
+      "x_1": 29,
+      "x_2": 30,
+      "y_1": 0,
+      "y_2": 1,
+      "name": "boxIDb",
+      "sampletext": "Example of boxIDb",
+      "page": 0,
+      "valign": 3,
+      "halign": 3,
+      "type": 1
+    },
+    {
+      "id_as_int": 2,
+      "x_1": 15,
+      "x_2": 16,
+      "y_1": 3,
+      "y_2": 4,
+      "name": "boxIDc",
+      "sampletext": "Example of boxIDc",
+      "page": 0,
+      "valign": 3,
+      "halign": 3,
+      "type": 3
+    },
+    {
+      "id_as_int": 3,
+      "x_1": 17,
+      "x_2": 18,
+      "y_1": 3,
+      "y_2": 4,
+      "name": "boxIDd",
+      "sampletext": "Example of boxIDd",
+      "page": 0,
+      "valign": 3,
+      "halign": 3,
+      "type": 3
+    },
+    {
+      "id_as_int": 4,
+      "x_1": 19,
+      "x_2": 21,
+      "y_1": 3,
+      "y_2": 4,
+      "name": "boxIDe",
+      "sampletext": "Example of boxIDe",
+      "page": 0,
+      "valign": 3,
+      "halign": 3,
+      "type": 3
+    },
+    {
+      "id_as_int": 5,
+      "x_1": 20,
+      "x_2": 21,
+      "y_1": 3,
+      "y_2": 4,
+      "name": "boxIDf",
+      "sampletext": "Example of boxIDf",
+      "page": 0,
+      "valign": 3,
+      "halign": 3,
+      "type": 3
+    },
+    {
+      "id_as_int": 6,
+      "x_1": 13,
+      "x_2": 22,
+      "y_1": 5,
+      "y_2": 6,
+      "name": "boxIDg",
+      "sampletext": "Example of boxIDg",
+      "page": 0,
+      "valign": 1,
+      "halign": 1,
+      "type": 0
+    },
+    {
+      "id_as_int": 7,
+      "x_1": 13,
+      "x_2": 22,
+      "y_1": 7,
+      "y_2": 8,
+      "name": "boxIDh",
+      "sampletext": "Example of boxIDh",
+      "page": 0,
+      "valign": 1,
+      "halign": 1,
+      "type": 0
+    },
+    {
+      "id_as_int": 8,
+      "x_1": 23,
+      "x_2": 24,
+      "y_1": 9,
+      "y_2": 10,
+      "name": "boxIDi",
+      "sampletext": "Example of boxIDi",
+      "page": 0,
+      "valign": 3,
+      "halign": 3,
+      "type": 3
+    },
+    {
+      "id_as_int": 9,
+      "x_1": 23,
+      "x_2": 24,
+      "y_1": 9,
+      "y_2": 10,
+      "name": "boxIDj",
+      "sampletext": "Example of boxIDj",
+      "page": 0,
+      "valign": 3,
+      "halign": 3,
+      "type": 5
+    },
+    {
+      "id_as_int": 10,
+      "x_1": 25,
+      "x_2": 26,
+      "y_1": 9,
+      "y_2": 10,
+      "name": "boxIDk",
+      "sampletext": "Example of boxIDk",
+      "page": 0,
+      "valign": 3,
+      "halign": 3,
+      "type": 3
+    },
+    {
+      "id_as_int": 11,
+      "x_1": 25,
+      "x_2": 26,
+      "y_1": 9,
+      "y_2": 10,
+      "name": "boxIDl",
+      "sampletext": "Example of boxIDl",
+      "page": 0,
+      "valign": 3,
+      "halign": 3,
+      "type": 5
+    },
+    {
+      "id_as_int": 12,
+      "x_1": 27,
+      "x_2": 28,
+      "y_1": 10,
+      "y_2": 11,
+      "name": "boxIDm",
+      "sampletext": "Example of boxIDm",
+      "page": 0,
+      "valign": 3,
+      "halign": 1,
+      "type": 1
+    },
+    {
+      "id_as_int": 13,
+      "x_1": 13,
+      "x_2": 22,
+      "y_1": 11,
+      "y_2": 12,
+      "name": "boxIDn",
+      "sampletext": "Example of boxIDn",
+      "page": 0,
+      "valign": 1,
+      "halign": 1,
+      "type": 0
+    },
+    {
+      "id_as_int": 0,
+      "x_1": 14,
+      "x_2": 22,
+      "y_1": 2,
+      "y_2": 31,
+      "name": "boxIDa",
+      "sampletext": "Example of boxIDa",
+      "page": 0,
+      "valign": 3,
+      "halign": 1,
+      "type": 1
+    }
+  ],
+  "grids": [
+    {
+      "id": 0,
+      "page": 0,
+      "value": 79,
+      "is_horizontal": true
+    },
+    {
+      "id": 1,
+      "page": 0,
+      "value": 93,
+      "is_horizontal": true
+    },
+    {
+      "id": 2,
+      "page": 0,
+      "value": 102,
+      "is_horizontal": true
+    },
+    {
+      "id": 3,
+      "page": 0,
+      "value": 140,
+      "is_horizontal": true
+    },
+    {
+      "id": 4,
+      "page": 0,
+      "value": 151,
+      "is_horizontal": true
+    },
+    {
+      "id": 5,
+      "page": 0,
+      "value": 155,
+      "is_horizontal": true
+    },
+    {
+      "id": 6,
+      "page": 0,
+      "value": 276,
+      "is_horizontal": true
+    },
+    {
+      "id": 7,
+      "page": 0,
+      "value": 300,
+      "is_horizontal": true
+    },
+    {
+      "id": 8,
+      "page": 0,
+      "value": 641,
+      "is_horizontal": true
+    },
+    {
+      "id": 9,
+      "page": 0,
+      "value": 657,
+      "is_horizontal": true
+    },
+    {
+      "id": 10,
+      "page": 0,
+      "value": 669,
+      "is_horizontal": true
+    },
+    {
+      "id": 11,
+      "page": 0,
+      "value": 684,
+      "is_horizontal": true
+    },
+    {
+      "id": 12,
+      "page": 0,
+      "value": 728,
+      "is_horizontal": true
+    },
+    {
+      "id": 13,
+      "page": 0,
+      "value": 77,
+      "is_horizontal": false
+    },
+    {
+      "id": 14,
+      "page": 0,
+      "value": 154,
+      "is_horizontal": false
+    },
+    {
+      "id": 15,
+      "page": 0,
+      "value": 157,
+      "is_horizontal": false
+    },
+    {
+      "id": 16,
+      "page": 0,
+      "value": 208,
+      "is_horizontal": false
+    },
+    {
+      "id": 17,
+      "page": 0,
+      "value": 239,
+      "is_horizontal": false
+    },
+    {
+      "id": 18,
+      "page": 0,
+      "value": 291,
+      "is_horizontal": false
+    },
+    {
+      "id": 19,
+      "page": 0,
+      "value": 330,
+      "is_horizontal": false
+    },
+    {
+      "id": 20,
+      "page": 0,
+      "value": 415,
+      "is_horizontal": false
+    },
+    {
+      "id": 21,
+      "page": 0,
+      "value": 464,
+      "is_horizontal": false
+    },
+    {
+      "id": 22,
+      "page": 0,
+      "value": 521,
+      "is_horizontal": false
+    },
+    {
+      "id": 23,
+      "page": 0,
+      "value": 306,
+      "is_horizontal": false
+    },
+    {
+      "id": 24,
+      "page": 0,
+      "value": 336,
+      "is_horizontal": false
+    },
+    {
+      "id": 25,
+      "page": 0,
+      "value": 357,
+      "is_horizontal": false
+    },
+    {
+      "id": 26,
+      "page": 0,
+      "value": 381,
+      "is_horizontal": false
+    },
+    {
+      "id": 27,
+      "page": 0,
+      "value": 179,
+      "is_horizontal": false
+    },
+    {
+      "id": 28,
+      "page": 0,
+      "value": 503,
+      "is_horizontal": false
+    },
+    {
+      "id": 29,
+      "page": 0,
+      "value": 221,
+      "is_horizontal": false
+    },
+    {
+      "id": 30,
+      "page": 0,
+      "value": 234,
+      "is_horizontal": false
+    },
+    {
+      "id": 31,
+      "page": 0,
+      "value": 130,
+      "is_horizontal": true
+    }
+  ],
+  "tables": []
+}
