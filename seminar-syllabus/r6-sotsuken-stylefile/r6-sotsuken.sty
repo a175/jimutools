@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This file was created by AFM.
+% The names of commands to put boxes may be just Box IDs.
+% They are not good names to use.
+% Please define commands to use as frontend.
+%
+% Please redefine the command \pageNoA@at@first@@@rsotsuken@nu@
+% if you want to do something whenever pageNoA is called.
+%
+% Please redefine \baseuplength
+% if you want to move background image up.
+%
+% Boxcommands, e.g. \boxIDa, 
+% between \begin{groupedcolumns} and \end{groupedcolumns}
+% use common top margin.
+% The command \nextrow in the environment updates the margin.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definition of basic commands
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage{documentonform}
+
+\newif\if@PDF@image@type@nu@
+\@PDF@image@type@nu@true
+\newif\if@js@basecls@nu@
+\@js@basecls@nu@false
+
+\DeclareOption{pdf}{\@PDF@image@type@nu@true}
+\DeclareOption{none}{\@PDF@image@type@nu@false}
+\DeclareOption{js}{\@js@basecls@nu@true}
+\ProcessOptions\relax
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nu@input@json@project@data{rsotsuken}{projectdata.json}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Backend commands for pages.
+\newenvironment{pageNoA@none@@@rsotsuken@nu@}{\thispagestyle{empty}\begin{overwrappicture*}[bb=0 0 595 841, page=1]{r6-sotsuken.pdf}\pageNoA@at@first@@@rsotsuken@nu@}{\end{overwrappicture*}}
+\newenvironment{pageNoA@pdf@@@rsotsuken@nu@}{\thispagestyle{empty}\begin{overwrappicture}[bb=0 0 595 841, page=1]{r6-sotsuken.pdf}\pageNoA@at@first@@@rsotsuken@nu@}{\end{overwrappicture}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Backend commands for table forms.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forntend commands of boxes
+
+% page 1 i.e.,A
+
+% \newenvironment{boxIDa}{\begin{nu@documentonform@put@box@env}{rsotsuken}{boxIDa}}{\end{nu@documentonform@put@box@env}}
+\newcommand{\boxIDa}[1]{\nu@documentonform@put@box@com{rsotsuken}{boxIDa}{#1}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@checkmark@com{rsotsuken}{boxIDa}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@strike@com{rsotsuken}{boxIDa}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@rule@com{rsotsuken}{boxIDa}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@oval@com{rsotsuken}{boxIDa}}
+
+
+% \newenvironment{boxIDb}{\begin{nu@documentonform@put@box@env}{rsotsuken}{boxIDb}}{\end{nu@documentonform@put@box@env}}
+\newcommand{\boxIDb}[1]{\nu@documentonform@put@box@com{rsotsuken}{boxIDb}{#1}}
+% \newcommand{\boxIDb}{\nu@documentonform@put@checkmark@com{rsotsuken}{boxIDb}}
+% \newcommand{\boxIDb}{\nu@documentonform@put@strike@com{rsotsuken}{boxIDb}}
+% \newcommand{\boxIDb}{\nu@documentonform@put@rule@com{rsotsuken}{boxIDb}}
+% \newcommand{\boxIDb}{\nu@documentonform@put@oval@com{rsotsuken}{boxIDb}}
+
+
+\newenvironment{boxIDd}{\begin{nu@documentonform@put@box@env}{rsotsuken}{boxIDd}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDd}[1]{\nu@documentonform@put@box@com{rsotsuken}{boxIDd}{#1}}
+% \newcommand{\boxIDd}{\nu@documentonform@put@checkmark@com{rsotsuken}{boxIDd}}
+% \newcommand{\boxIDd}{\nu@documentonform@put@strike@com{rsotsuken}{boxIDd}}
+% \newcommand{\boxIDd}{\nu@documentonform@put@rule@com{rsotsuken}{boxIDd}}
+% \newcommand{\boxIDd}{\nu@documentonform@put@oval@com{rsotsuken}{boxIDd}}
+
+
+\newenvironment{boxIDe}{\begin{nu@documentonform@put@box@env}{rsotsuken}{boxIDe}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDe}[1]{\nu@documentonform@put@box@com{rsotsuken}{boxIDe}{#1}}
+% \newcommand{\boxIDe}{\nu@documentonform@put@checkmark@com{rsotsuken}{boxIDe}}
+% \newcommand{\boxIDe}{\nu@documentonform@put@strike@com{rsotsuken}{boxIDe}}
+% \newcommand{\boxIDe}{\nu@documentonform@put@rule@com{rsotsuken}{boxIDe}}
+% \newcommand{\boxIDe}{\nu@documentonform@put@oval@com{rsotsuken}{boxIDe}}
+
+
+\newenvironment{boxIDf}{\begin{nu@documentonform@put@box@env}{rsotsuken}{boxIDf}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDf}[1]{\nu@documentonform@put@box@com{rsotsuken}{boxIDf}{#1}}
+% \newcommand{\boxIDf}{\nu@documentonform@put@checkmark@com{rsotsuken}{boxIDf}}
+% \newcommand{\boxIDf}{\nu@documentonform@put@strike@com{rsotsuken}{boxIDf}}
+% \newcommand{\boxIDf}{\nu@documentonform@put@rule@com{rsotsuken}{boxIDf}}
+% \newcommand{\boxIDf}{\nu@documentonform@put@oval@com{rsotsuken}{boxIDf}}
+
+
+\newenvironment{boxIDg}{\begin{nu@documentonform@put@box@env}{rsotsuken}{boxIDg}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDg}[1]{\nu@documentonform@put@box@com{rsotsuken}{boxIDg}{#1}}
+% \newcommand{\boxIDg}{\nu@documentonform@put@checkmark@com{rsotsuken}{boxIDg}}
+% \newcommand{\boxIDg}{\nu@documentonform@put@strike@com{rsotsuken}{boxIDg}}
+% \newcommand{\boxIDg}{\nu@documentonform@put@rule@com{rsotsuken}{boxIDg}}
+% \newcommand{\boxIDg}{\nu@documentonform@put@oval@com{rsotsuken}{boxIDg}}
+
+
+% \newenvironment{boxIDh}{\begin{nu@documentonform@put@box@env}{rsotsuken}{boxIDh}}{\end{nu@documentonform@put@box@env}}
+\newcommand{\boxIDh}[1]{\nu@documentonform@put@box@com{rsotsuken}{boxIDh}{#1}}
+% \newcommand{\boxIDh}{\nu@documentonform@put@checkmark@com{rsotsuken}{boxIDh}}
+% \newcommand{\boxIDh}{\nu@documentonform@put@strike@com{rsotsuken}{boxIDh}}
+% \newcommand{\boxIDh}{\nu@documentonform@put@rule@com{rsotsuken}{boxIDh}}
+% \newcommand{\boxIDh}{\nu@documentonform@put@oval@com{rsotsuken}{boxIDh}}
+
+
+% \newenvironment{boxIDi}{\begin{nu@documentonform@put@box@env}{rsotsuken}{boxIDi}}{\end{nu@documentonform@put@box@env}}
+\newcommand{\boxIDi}[1]{\nu@documentonform@put@box@com{rsotsuken}{boxIDi}{#1}}
+% \newcommand{\boxIDi}{\nu@documentonform@put@checkmark@com{rsotsuken}{boxIDi}}
+% \newcommand{\boxIDi}{\nu@documentonform@put@strike@com{rsotsuken}{boxIDi}}
+% \newcommand{\boxIDi}{\nu@documentonform@put@rule@com{rsotsuken}{boxIDi}}
+% \newcommand{\boxIDi}{\nu@documentonform@put@oval@com{rsotsuken}{boxIDi}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forntend commands of pages
+
+\if@PDF@image@type@nu@\newenvironment{pageNoA}{\begin{pageNoA@pdf@@@rsotsuken@nu@}}{\end{pageNoA@pdf@@@rsotsuken@nu@}}
+\else
+\newenvironment{pageNoA}{\begin{pageNoA@none@@@rsotsuken@nu@}}{\end{pageNoA@none@@@rsotsuken@nu@}}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hooked commands
+
+\newcommand{\pageNoA@at@first@@@rsotsuken@nu@}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forntend commands of table forms
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%

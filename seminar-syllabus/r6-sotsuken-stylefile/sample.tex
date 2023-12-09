@@ -1,0 +1,55 @@
+%sample
+\documentclass[a4paper,12pt]{amsart}
+%\nofiles
+
+%\usepackage{graphicx}
+%\usepackage[none]{r6-sotsuken}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[pdf]{r6-sotsuken}
+\usepackage{r6-sotsuken-frontend}
+
+% If you use the class jsarticle, then use js option
+%\usepackage[pdf,js]{r6-sotsuken}
+
+\begin{document}
+
+
+
+% page1
+\begin{sotsuken}
+  %年度
+  \nendo{6}
+
+  %氏名
+  \namae{教員氏名}
+  %研究室
+  \kenkyushitsu{研究室番号}
+  %メールアドレス
+  \mailaddress{メールアドレス}
+
+  %テキスト ［著者、タイトル、出版社］（複数も可）
+  \begin{textbooks}
+    x
+  \end{textbooks}
+
+  %テキストについて 
+  \begin{commentsOnText}
+    x
+  \end{commentsOnText}
+
+  %卒業研究の進め方
+  \begin{commentsOnSeminar}
+    x
+  \end{commentsOnSeminar}
+
+  %その他コメント
+  \begin{commentsOnMisc}
+    d
+  \end{commentsOnMisc}
+
+
+
+\end{sotsuken}
+
+\end{document}

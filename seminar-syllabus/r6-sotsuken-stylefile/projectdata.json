@@ -1,0 +1,267 @@
+{
+  "bgimagepath": "r6-sotsuken.pdf",
+  "stylename": "r6-sotsuken",
+  "samplebase": "sample",
+  "makefilepath": "Makefile",
+  "jsonpath": "projectdata.json",
+  "localcommandsuffix": "rsotsuken",
+  "boxes": [
+    {
+      "id_as_int": 0,
+      "x_1": 20,
+      "x_2": 21,
+      "y_1": 0,
+      "y_2": 1,
+      "name": "boxIDa",
+      "sampletext": "Example of boxIDa",
+      "page": 0,
+      "valign": 3,
+      "halign": 3,
+      "type": 1
+    },
+    {
+      "id_as_int": 1,
+      "x_1": 19,
+      "x_2": 24,
+      "y_1": 2,
+      "y_2": 3,
+      "name": "boxIDb",
+      "sampletext": "Example of boxIDb",
+      "page": 0,
+      "valign": 3,
+      "halign": 1,
+      "type": 1
+    },
+    {
+      "id_as_int": 3,
+      "x_1": 16,
+      "x_2": 24,
+      "y_1": 4,
+      "y_2": 5,
+      "name": "boxIDd",
+      "sampletext": "Example of boxIDd",
+      "page": 0,
+      "valign": 1,
+      "halign": 1,
+      "type": 0
+    },
+    {
+      "id_as_int": 4,
+      "x_1": 16,
+      "x_2": 24,
+      "y_1": 6,
+      "y_2": 7,
+      "name": "boxIDe",
+      "sampletext": "Example of boxIDe",
+      "page": 0,
+      "valign": 1,
+      "halign": 1,
+      "type": 0
+    },
+    {
+      "id_as_int": 5,
+      "x_1": 16,
+      "x_2": 24,
+      "y_1": 8,
+      "y_2": 9,
+      "name": "boxIDf",
+      "sampletext": "Example of boxIDf",
+      "page": 0,
+      "valign": 1,
+      "halign": 1,
+      "type": 0
+    },
+    {
+      "id_as_int": 6,
+      "x_1": 16,
+      "x_2": 24,
+      "y_1": 10,
+      "y_2": 11,
+      "name": "boxIDg",
+      "sampletext": "Example of boxIDg",
+      "page": 0,
+      "valign": 1,
+      "halign": 1,
+      "type": 0
+    },
+    {
+      "id_as_int": 7,
+      "x_1": 17,
+      "x_2": 22,
+      "y_1": 12,
+      "y_2": 13,
+      "name": "boxIDh",
+      "sampletext": "Example of boxIDh",
+      "page": 0,
+      "valign": 3,
+      "halign": 1,
+      "type": 1
+    },
+    {
+      "id_as_int": 8,
+      "x_1": 18,
+      "x_2": 23,
+      "y_1": 14,
+      "y_2": 15,
+      "name": "boxIDi",
+      "sampletext": "Example of boxIDi",
+      "page": 0,
+      "valign": 3,
+      "halign": 1,
+      "type": 1
+    }
+  ],
+  "grids": [
+    {
+      "id": 0,
+      "page": 0,
+      "value": 64,
+      "is_horizontal": true
+    },
+    {
+      "id": 1,
+      "page": 0,
+      "value": 79,
+      "is_horizontal": true
+    },
+    {
+      "id": 2,
+      "page": 0,
+      "value": 109,
+      "is_horizontal": true
+    },
+    {
+      "id": 3,
+      "page": 0,
+      "value": 132,
+      "is_horizontal": true
+    },
+    {
+      "id": 4,
+      "page": 0,
+      "value": 152,
+      "is_horizontal": true
+    },
+    {
+      "id": 5,
+      "page": 0,
+      "value": 272,
+      "is_horizontal": true
+    },
+    {
+      "id": 6,
+      "page": 0,
+      "value": 292,
+      "is_horizontal": true
+    },
+    {
+      "id": 7,
+      "page": 0,
+      "value": 431,
+      "is_horizontal": true
+    },
+    {
+      "id": 8,
+      "page": 0,
+      "value": 446,
+      "is_horizontal": true
+    },
+    {
+      "id": 9,
+      "page": 0,
+      "value": 584,
+      "is_horizontal": true
+    },
+    {
+      "id": 10,
+      "page": 0,
+      "value": 602,
+      "is_horizontal": true
+    },
+    {
+      "id": 11,
+      "page": 0,
+      "value": 693,
+      "is_horizontal": true
+    },
+    {
+      "id": 12,
+      "page": 0,
+      "value": 716,
+      "is_horizontal": true
+    },
+    {
+      "id": 13,
+      "page": 0,
+      "value": 728,
+      "is_horizontal": true
+    },
+    {
+      "id": 14,
+      "page": 0,
+      "value": 735,
+      "is_horizontal": true
+    },
+    {
+      "id": 15,
+      "page": 0,
+      "value": 746,
+      "is_horizontal": true
+    },
+    {
+      "id": 16,
+      "page": 0,
+      "value": 85,
+      "is_horizontal": false
+    },
+    {
+      "id": 17,
+      "page": 0,
+      "value": 155,
+      "is_horizontal": false
+    },
+    {
+      "id": 18,
+      "page": 0,
+      "value": 170,
+      "is_horizontal": false
+    },
+    {
+      "id": 19,
+      "page": 0,
+      "value": 178,
+      "is_horizontal": false
+    },
+    {
+      "id": 20,
+      "page": 0,
+      "value": 296,
+      "is_horizontal": false
+    },
+    {
+      "id": 21,
+      "page": 0,
+      "value": 308,
+      "is_horizontal": false
+    },
+    {
+      "id": 22,
+      "page": 0,
+      "value": 343,
+      "is_horizontal": false
+    },
+    {
+      "id": 23,
+      "page": 0,
+      "value": 359,
+      "is_horizontal": false
+    },
+    {
+      "id": 24,
+      "page": 0,
+      "value": 517,
+      "is_horizontal": false
+    }
+  ],
+  "tables": []
+}
