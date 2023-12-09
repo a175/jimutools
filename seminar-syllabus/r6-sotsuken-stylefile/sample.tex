@@ -12,6 +12,9 @@
 % If you use the class jsarticle, then use js option
 %\usepackage[pdf,js]{r6-sotsuken}
 
+%
+\usepackage{url}
+
 \begin{document}
 
 
@@ -26,26 +29,28 @@
   %研究室
   \kenkyushitsu{研究室番号}
   %メールアドレス
-  \mailaddress{メールアドレス}
+  \mailaddress{\url{id@domain}}
 
   %テキスト ［著者、タイトル、出版社］（複数も可）
   \begin{textbooks}
-    x
+    \begin{enumerate}
+      \item ....
+    \end{enumerate}
   \end{textbooks}
 
   %テキストについて 
   \begin{commentsOnText}
-    x
+
   \end{commentsOnText}
 
   %卒業研究の進め方
   \begin{commentsOnSeminar}
-    x
+
   \end{commentsOnSeminar}
 
   %その他コメント
   \begin{commentsOnMisc}
-    d
+    
   \end{commentsOnMisc}
 
 
