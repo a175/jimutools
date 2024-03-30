@@ -7,11 +7,11 @@
 
 `src/sample.txt` のようなファイルを作成し,
 ```
-python3 kenshu.py sample.txt
+python3 ryokomeirei.py sample.txt
 ```
 とやればよい.
 細かいオプションは
-`python3 kenshu.py --help`
+`python3 ryokomeirei.py --help`
 でみることができる.
 
 入力ファイルは,
