@@ -1,63 +1,63 @@
 import docx as docx
+import openpyxl
 import datetime
 import sys
 import os
 import argparse
 
+CELL=[]
+CELL.append(("申請年",15,32))
+CELL.append(("申請月",15,37))
+CELL.append(("申請日",15,43))
+CELL.append(("職",20,17))
+CELL.append(("氏名",21,17))
+CELL.append(("研修内容",27,3))
+CELL.append(("研修先",31,3))
+CELL.append(("研修開始年",35,6))
+CELL.append(("研修開始月",35,8))
+CELL.append(("研修開始日",35,10))
+CELL.append(("研修終了年",35,15))
+CELL.append(("研修終了月",35,18))
+CELL.append(("研修終了日",35,24))
+CELL.append(("研修日数",35,33))
+CELL.append(("経費",61,3))
+CELL.append(("安全保障",63,8))
+
+TABLEROW=[39,42,45,48,51,54,57]
+TABLECELL=[("YYYY/MM/DD",2),("出発地",6),("到着地",10),("宿泊及び滞在地",14),("宿泊数",25)]
+
+SHEETNAME="別紙様式２"
 
 
-IMP=[]
-IMP.append(("申請年月日",(0,3,0,1)))
-IMP.append(("職氏名",(0,3,0,6)))
-IMP.append(("研修内容",(0,4,3,0)))
-IMP.append(("研修先",(0,5,3,0)))
-IMP.append(("研修期間",(0,6,3,0)))
-
-IMP.append(("渡航費",(0,19,0,2)))
-IMP.append(("滞在費",(0,19,0,4)))
-IMP.append(("国内連絡先",(0,19,0,6)))
-
-
-
-
-def make_docx(basedocx,outdocx,formdata):
-    if basedocx==outdocx:
+def make_xlsx(basexlsx,outxlsx,formdata):
+    if basexlsx==outxlsx:
         return
-    doc = docx.Document(basedocx)
-    for (key,(t,i,j,k)) in IMP:
-        if key in formdata:
-            doc.tables[t].cell(i,j).paragraphs[k].text=formdata[key]
-            if key == "職氏名":
-                doc.tables[t].cell(i,j).paragraphs[k].alignment=docx.enum.text.WD_ALIGN_PARAGRAPH.RIGHT 
-
-    if "日程" in formdata:
-        for l,ni in enumerate(formdata["日程"]):
-            t=0
-            i=8+l
-            k=0
-            if i > 13:
-                print("Warn: Some Lines are not added.")
-                continue
-            for (key,j) in [("年月日",1),("出発地",4),("到着地",6),("宿泊及び滞在地",12),("宿泊数",14)]:
-                if key in ni:
-                    doc.tables[t].cell(i,j).paragraphs[k].text=ni[key]
-
+    wb = openpyxl.load_workbook(basexlsx)
+    ws = wb[SHEETNAME]
+    for (k,i,j) in CELL:
+        if k in formdata:
+            ws.cell(row=i,column=j,value=formdata[k])
         
-    doc.save(outdocx)
-    pass
+    for (ni,i) in zip(formdata["日程"],TABLEROW):
+        for k,j in TABLECELL:
+            if k in ni:
+                ws.cell(row=i,column=j,value=ni[k])
+    wb.save(outxlsx)
 
+def get_wareki_int(yyyy):
+    return yyyy-2018
 
 def get_wareki_str(yyyy,mm,dd):
-    return "令和{0}年{1}月{2}日".format(yyyy-2018,mm,dd)
+    return "令和{0}年{1}月{2}日".format(get_wareki_int(2018),mm,dd)
 
 def get_wareki_short_str(yyyy,mm,dd):
-    return "R{0}.{1}.{2}".format(yyyy-2018,mm,dd)
+    return "R{0}.{1}.{2}".format(get_wareki_int(yyyy),mm,dd)
 
 def read_formdata_from_file(file):
     with open(file) as f:
         data={"":"","日程":[]}
         currenttag=""
-        keys=["申請年月日","職","氏名","研修内容","研修先","渡航費", "滞在費","国内連絡先","mailto_name","mailto_address","filenameprefix"]
+        keys=["申請年月日","職","氏名","研修内容","研修先","経費","安全保障","mailto_name","mailto_address","filenameprefix"]
         tabelKeys=["出発地","到着地","宿泊及び滞在地","宿泊数"]
         
         for l in f:
@@ -87,17 +87,18 @@ def read_formdata_from_file(file):
                     data[currenttag][-1][subcurrenttag]=li[len(k)+2:]
 
         formdata={}
-        if "氏名" in data:
-            formdata["氏名"]=data["氏名"]
-            if "職" in data:
-                formdata["職氏名"]="職・氏名  {0}・{1}".format(data["職"],data["氏名"])
         if "申請年月日" in data:
             d=[ int(di) for di in data["申請年月日"].split("/")]
             formdata["申請年月日"]=get_wareki_str(d[0],d[1],d[2])
-            pass
+            formdata["申請年"]=get_wareki_int(d[0])
+            formdata["申請月"]=d[1]
+            formdata["申請日"]=d[2]
         else:
             dt_now = datetime.datetime.now()
             formdata["申請年月日"]=get_wareki_str(dt_now.year,dt_now.month,dt_now.day)
+            formdata["申請年"]=get_wareki_int(dt_now.year)
+            formdata["申請月"]=dt_now.month
+            formdata["申請日"]=dt_now.day
 
         if data["日程"] != []:
             date=None
@@ -110,6 +111,7 @@ def read_formdata_from_file(file):
                 if ni["年月日"] != "":
                     d=[ int(di) for di in ni["年月日"].split("/")]
                     nni["年月日"]=get_wareki_short_str(d[0],d[1],d[2])
+                    nni["YYYY/MM/DD"]="{0:4d}/{1:02d}/{2:02d}".format(d[0],d[1],d[2])
                     dt=datetime.datetime(year=d[0], month=d[1], day=d[2])
                     nni["datetime"]=dt
                     if date==None:
@@ -123,6 +125,14 @@ def read_formdata_from_file(file):
             d0=get_wareki_str(firstdate.year,firstdate.month,firstdate.day)
             d1=get_wareki_str(date.year,date.month,date.day)
             d2=1+(date-firstdate).days
+            formdata["研修開始年"]=get_wareki_int(firstdate.year)
+            formdata["研修開始月"]=firstdate.month
+            formdata["研修開始日"]=firstdate.day
+            formdata["研修終了年"]=get_wareki_int(date.year)
+            formdata["研修終了月"]=date.month
+            formdata["研修終了日"]=date.day
+            formdata["研修日数"]=d2
+            
             formdata["研修期間"]="自 {0} 〜 至 {1} ({2}日間)".format(d0,d1,d2)
             formdata["day0"]=d0
             if firstdate.year==date.year:
@@ -142,14 +152,10 @@ def read_formdata_from_file(file):
             formdata["YYYY/MM/DD-"]="{0:4d}/{1:02d}/{2:02d}".format(firstdate.year,firstdate.month,firstdate.day)+lastdate
             formdata["YYYYMMDD"]="{0:4d}{1:02d}{2:02d}".format(firstdate.year,firstdate.month,firstdate.day)
 
-        keys_justcopy=["研修内容","研修先","mailto_name","mailto_address","filenameprefix"]
+        keys_justcopy=["研修内容","研修先","mailto_name","mailto_address","filenameprefix","安全保障","経費","職", "氏名"]
         for k in keys_justcopy:
             if k in data:
                 formdata[k]=data[k].replace("\\\\","\n")
-        keys_justcopy_withkey=["渡航費", "滞在費","国内連絡先"]
-        for k in keys_justcopy_withkey:
-            if k in data:
-                formdata[k]=k+": "+data[k].replace("\\\\","\n")
         return formdata
 
     return None
@@ -195,36 +201,36 @@ def mailtxt(formdata):
 def test():
     parser = argparse.ArgumentParser(description='研修用書類生成') 
     parser.add_argument('inputfile', help='研修の内容に関する入力ファイル')
-    parser.add_argument('-od', '--output-docx', help='出力するdocxのファイル名.  デフォルトは出発日を使い, filenameprefix-YYYYMMDD.docx')
+    parser.add_argument('-ox', '--output-xlsx', help='出力するxlsxのファイル名.  デフォルトは出発日を使い, filenameprefix-YYYYMMDD.xlsx')
     parser.add_argument('-om', '--output-mail', help='出力するmailのファイル名. デフォルトは出発日を使い, filenameprefix-YYYYMMDD.txt')
-    parser.add_argument('-O', '--output-base', help='出力ファイルを, OUTPUT_BASE.docx と OUTPUT_BASE.txt に指定.')
-    parser.add_argument('-b', '--basefile', help='元となるdocx. デフォルトは, minimum.docx')   
+    parser.add_argument('-O', '--output-base', help='出力ファイルを, OUTPUT_BASE.xlsx と OUTPUT_BASE.txt に指定.')
+    parser.add_argument('-b', '--basefile', help='元となるxlsx. デフォルトは, minimum.xlsx')   
     args = parser.parse_args()
 
     inputfile=args.inputfile
     fd=read_formdata_from_file(inputfile)
 
     if args.basefile:
-        basedocx = args.basefile
+        basexlsx = args.basefile
     else:
-        basedocx = os.path.join(os.path.dirname(__file__),"./minimum.docx")
+        basexlsx = os.path.join(os.path.dirname(__file__),"minimum.xlsx")
         
-    if args.output_docx:
-        outputdocx=args.output_docx
+    if args.output_xlsx:
+        outputxlsx=args.output_xlsx
     elif args.output_base:
-            outputdocx=args.output_base+".docx"
+            outputxlsx=args.output_base+".xlsx"
     elif "YYYYMMDD" in fd:
         if "filenameprefix" in fd:
-            outputdocx=fd["filenameprefix"]+"-"+fd["YYYYMMDD"]+".docx"
+            outputxlsx=fd["filenameprefix"]+"-"+fd["YYYYMMDD"]+".xlsx"
         else:
-            outputdocx=fd["YYYYMMDD"]+".docx"
+            outputxlsx=fd["YYYYMMDD"]+".xlsx"
     else:
-        outputdocx="test.docx"
+        outputxlsx="test.xlsx"
 
-    if basedocx==outputdocx:
+    if basexlsx==outputxlsx:
         return
 
-    make_docx(basedocx,outputdocx,fd)
+    make_xlsx(basexlsx,outputxlsx,fd)
         
     if args.output_mail:
         outputmail=args.output_mail
@@ -243,7 +249,11 @@ def test():
     with open(outputmail,"w") as f:
         f.write(mailtxt(fd))
 
-
+    if "申請年" in fd and "研修開始年" in fd:
+        dt0=datetime.datetime(year=fd["申請年"], month=fd["申請月"], day=fd["申請日"])
+        dt1=datetime.datetime(year=fd["研修開始年"], month=fd["研修開始月"], day=fd["研修開始日"])
+        if dt0>dt1:
+            print("WARNING: Please check the date.")
 
 
 

@@ -36,5 +36,8 @@ pip install --user python-docx
 ```
 とかやれば簡単に入れられると思う.
 
-
+エクセルファイルを操作するライブラリ`openpyxl`
+```
+apt-get install  python3-openpyxl
+````
            
