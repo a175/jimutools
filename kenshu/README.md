@@ -25,19 +25,22 @@ python3 kenshu.py sample.txt
 ただし,
 実装をサボっているせいで,
 日程表は6行以内でないといけないなどの制限はある.
-必要に応じてdocxファイルを直接修正する必要があるかも知れない.
+必要に応じてxlsxファイルを直接修正する必要があるかも知れない.
 
 ### Requirements
 
-これを実行するには `python3`, `python-docx`が必要になる.
-`python-docx` は,
+これを実行するには `python3`, `python-openpyxl`が必要になる.
+`python-openpyxl` は,
 ```
-pip install --user python-docx
+pip install --user python-openpyxl
 ```
 とかやれば簡単に入れられると思う.
-
-エクセルファイルを操作するライブラリ`openpyxl`
+Debianで管理権限があれば以下でも入れられる.
 ```
 apt-get install  python3-openpyxl
 ````
+
+
+### Change Log
+2024年3月の様式改定に対応.
            
