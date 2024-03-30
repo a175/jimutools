@@ -30,3 +30,13 @@
 [`ryokomeirei/README.md`](/ryokomeirei/)
 を参照.
 
+## webwork
+
+システムから得られる履修者名簿から,
+Webのユーザ一括登録に必要となるテキストファイルを
+作成するためのスクリプト.
+
+詳細は,
+[`webwork/meibo/README.md`](/webwork/meibo/)
+を参照.
+

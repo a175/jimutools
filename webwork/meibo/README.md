@@ -1,5 +1,4 @@
-`0.sh`
-
+# `0.sh`
 
 履修登録関係のシステムからダウンロードしてきた履修者名簿`meibo.csv`
 と, moodleからダウンロードしてきた
@@ -11,3 +10,7 @@
 `bash ./0.sh`
 
 WebWorkの履修者登録用のファイルを作成してくれる.
+
+## Requirement
+
+bash, awk, sed, egrep だけなので, macでも使えるかも.
