@@ -48,7 +48,7 @@ def get_wareki_int(yyyy):
     return yyyy-2018
 
 def get_wareki_str(yyyy,mm,dd):
-    return "令和{0}年{1}月{2}日".format(get_wareki_int(2018),mm,dd)
+    return "令和{0}年{1}月{2}日".format(get_wareki_int(yyyy),mm,dd)
 
 def get_wareki_short_str(yyyy,mm,dd):
     return "R{0}.{1}.{2}".format(get_wareki_int(yyyy),mm,dd)
