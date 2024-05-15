@@ -1,0 +1,56 @@
+{
+  "bgimagepath": "letterpad.pdf",
+  "stylename": "letterpad",
+  "samplebase": "sample",
+  "makefilepath": "Makefile",
+  "jsonpath": "projectdata.json",
+  "localcommandsuffix": "letterpad",
+  "boxes": [
+    {
+      "id_as_int": 0,
+      "x_1": 3,
+      "x_2": 4,
+      "y_1": 0,
+      "y_2": 1,
+      "name": "boxIDa",
+      "sampletext": "Example of boxIDa",
+      "page": 0,
+      "valign": 1,
+      "halign": 1,
+      "type": 0
+    }
+  ],
+  "grids": [
+    {
+      "id": 0,
+      "page": 0,
+      "value": 160,
+      "is_horizontal": true
+    },
+    {
+      "id": 1,
+      "page": 0,
+      "value": 660,
+      "is_horizontal": true
+    },
+    {
+      "id": 2,
+      "page": 0,
+      "value": 297,
+      "is_horizontal": false
+    },
+    {
+      "id": 3,
+      "page": 0,
+      "value": 47,
+      "is_horizontal": false
+    },
+    {
+      "id": 4,
+      "page": 0,
+      "value": 544,
+      "is_horizontal": false
+    }
+  ],
+  "tables": []
+}

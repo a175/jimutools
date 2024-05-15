@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This file was created by AFM.
+% The names of commands to put boxes may be just Box IDs.
+% They are not good names to use.
+% Please define commands to use as frontend.
+%
+% Please redefine the command \pageNoA@at@first@@@letterpad@nu@
+% if you want to do something whenever pageNoA is called.
+%
+% Please redefine \baseuplength
+% if you want to move background image up.
+%
+% Boxcommands, e.g. \boxIDa, 
+% between \begin{groupedcolumns} and \end{groupedcolumns}
+% use common top margin.
+% The command \nextrow in the environment updates the margin.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definition of basic commands
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage{documentonform}
+
+\newif\if@PDF@image@type@nu@
+\@PDF@image@type@nu@true
+\newif\if@js@basecls@nu@
+\@js@basecls@nu@false
+
+\DeclareOption{pdf}{\@PDF@image@type@nu@true}
+\DeclareOption{none}{\@PDF@image@type@nu@false}
+\DeclareOption{js}{\@js@basecls@nu@true}
+\ProcessOptions\relax
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nu@input@json@project@data{letterpad}{projectdata.json}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Backend commands for pages.
+\newenvironment{pageNoA@none@@@letterpad@nu@}{\thispagestyle{empty}\begin{overwrappicture*}[bb=0 0 595 842, page=1]{letterpad.pdf}\pageNoA@at@first@@@letterpad@nu@}{\end{overwrappicture*}}
+\newenvironment{pageNoA@pdf@@@letterpad@nu@}{\thispagestyle{empty}\begin{overwrappicture}[bb=0 0 595 842, page=1]{letterpad.pdf}\pageNoA@at@first@@@letterpad@nu@}{\end{overwrappicture}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Backend commands for table forms.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forntend commands of boxes
+
+% page 1 i.e.,A
+
+\newenvironment{boxIDa}{\begin{nu@documentonform@put@box@env}{letterpad}{boxIDa}}{\end{nu@documentonform@put@box@env}}
+% \newcommand{\boxIDa}[1]{\nu@documentonform@put@box@com{letterpad}{boxIDa}{#1}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@checkmark@com{letterpad}{boxIDa}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@strike@com{letterpad}{boxIDa}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@rule@com{letterpad}{boxIDa}}
+% \newcommand{\boxIDa}{\nu@documentonform@put@oval@com{letterpad}{boxIDa}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forntend commands of pages
+
+\if@PDF@image@type@nu@\newenvironment{pageNoA}{\begin{pageNoA@pdf@@@letterpad@nu@}}{\end{pageNoA@pdf@@@letterpad@nu@}}
+\else
+\newenvironment{pageNoA}{\begin{pageNoA@none@@@letterpad@nu@}}{\end{pageNoA@none@@@letterpad@nu@}}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hooked commands
+
+\newcommand{\pageNoA@at@first@@@letterpad@nu@}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Forntend commands of table forms
+
+\newenvironment{letterpage}{\begin{pageNoA}\begin{boxIDa}}{\end{boxIDa}\end{pageNoA}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%

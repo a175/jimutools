@@ -40,3 +40,10 @@ Webのユーザ一括登録に必要となるテキストファイルを
 [`webwork/meibo/README.md`](/webwork/meibo/)
 を参照.
 
+## letterpad
+
+教室のレターパッドに合わせたTeXのスタイルファイル.
+
+詳細は,
+[`letterpad/README.md`](/letterpad/)
+を参照.
